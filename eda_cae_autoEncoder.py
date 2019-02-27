@@ -1,5 +1,4 @@
 import tensorflow as tf
-from tensorflow.contrib import autograph
 
 class EdaCaeAutoEncoder:
     def __init__(self, number_of_modules, input_size, ae_first_layer_hidden_layer_size
@@ -66,7 +65,7 @@ class EdaCaeAutoEncoder:
 #            average_error += tf.reduce_mean(tf.pow(self.input_x - y_prediction, 2) / self.number_of_modules)
 #        return average_error
 
-    @autograph.convert()
+    
     def loss_function(self):
         a = 0
         b = 0
